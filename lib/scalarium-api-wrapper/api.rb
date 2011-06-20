@@ -45,7 +45,7 @@ module Scalarium
     def get_headers
       # quick validation if the header is set
       if Scalarium.headers['X-Scalarium-Token'].nil? || Scalarium.headers['X-Scalarium-Token'] == "" 
-        raise AttributeException "X-Scalarium-Token is not set"
+        raise ArgumentError "X-Scalarium-Token is not set"
       end
       Scalarium.headers     
     end
