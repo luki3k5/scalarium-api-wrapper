@@ -20,9 +20,9 @@ It can:
 Install
 -- 
   Clone this repository 
- <pre><code>$ git clone http://github.com/luki3k5/scalarium-api-wrapper</code></pre>
+ <pre><code>$ git clone https://luki3k5@github.com/luki3k5/scalarium-api-wrapper.git </code></pre>
   or install the gem
- <pre><code>$ gem install scalarium-api-wrapper</code></pre>
+ <pre><code>$ gem install scalarium-api-wrapper </code></pre>
 
 
 
