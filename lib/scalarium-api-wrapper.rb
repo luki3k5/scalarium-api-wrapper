@@ -1,9 +1,11 @@
 module Scalarium
   
+  # @return [String] url for the clouds
   def self.clouds_url
     Scalarium.configuration.clouds_url
   end
 
+  # @return [String] url for the applications
   def self.applications_url
     Scalarium.configuration.applications_url
   end

@@ -7,7 +7,6 @@ module Scalarium
     
     # Method fetches all clouds on the server    
     #
-    # @option headers [Hash]       -    hash for of headers details for authentication
     # @returns array [Array]       -    array containing all the clouds 
     #
     def get_clouds
@@ -16,7 +15,6 @@ module Scalarium
     
     # Method fetches all applications on the server
     # 
-    # @option headers [Hash]      -     hash for of headers details for authentication
     # @returns array  [Array]     -     array containing all the applications 
     #
     def get_applications

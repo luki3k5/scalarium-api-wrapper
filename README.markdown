@@ -100,6 +100,11 @@ Here are the fields returned in each hash:
 
 for their meaning check Scalarium's documentation and examples
 
+Ruby on Rails integration
+--
+
+Here is a simple [RAKE task](https://gist.github.com/1037410) that illustrates how this library could be used with Rails application.
+
 
 
 
