@@ -63,9 +63,10 @@ We can then use the 'id' from the above hash and current application id to call 
 <code>api.fetch_deployment_details('application_id','deployment_id')</code>
 </pre>
 
+NOTE: We can always see the deploy status if we know proper deployment_id (even from the deploys that have been already finished)
 
 
-to obtain list of all possible applications execute:
+to obtain list of all available applications execute:
 <pre>
 <code>api.get_applications</code>
 </pre> 
