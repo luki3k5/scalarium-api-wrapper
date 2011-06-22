@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{This is scalarium API wrapper}
   s.description = %q{This is scalarium API wrapper, allowing to execute API calls to scalarium backend}
 
+  s.add_dependency('json')
   s.add_development_dependency('rake')
   s.add_development_dependency('rspec', '~> 2.0')
 
