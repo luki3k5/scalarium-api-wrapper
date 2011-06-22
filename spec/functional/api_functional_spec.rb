@@ -37,13 +37,12 @@ describe "Scalarium functional tests", "when first created" do
     @response_status["status"].should == "running"
     @response_status["command"].should == "deploy" 
     @response_status["application_id"].should == @application_id
-  end
-  
-  it "should check the status again thru fetch_deployment_details" do
+
+    sleep 2
     id_of_deployment = @response_status["id"]
     @status_check_response = @api.fetch_deployment_details(@application_id, id_of_deployment)
     @status_check_response.class.should == Hash
+    @status_check_response["status"].should == "running"
   end
-
   
 end

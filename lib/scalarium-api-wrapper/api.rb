@@ -27,7 +27,7 @@ module Scalarium
     # @returns hash [Hash]      -       Hash contains all the deployment details 
     # 
     def fetch_deployment_details(app_id, deployment_id)
-      http_get_request(Scalarium.applications_url+"/api/applications/#{app_id}/deployments/#{deployment_id}")
+      http_get_request(Scalarium.applications_url+"/#{app_id}/deployments/#{deployment_id}")
     end
     
     # Method allows to deploy application in scalarium

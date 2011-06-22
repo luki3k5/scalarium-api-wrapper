@@ -33,7 +33,7 @@ Setup
    <pre>
 <code>Scalarium.configuration.api_token = "YOUR TOKEN"</code></pre>
 
-You can obtain your token at ([https://manage.scalarium.com/users](https://manage.scalarium.com/users)) - I highly encourage to setup new user with (i.e. devdeploy) and then render him new API_TOKEN. 
+You can obtain your token at ([https://manage.scalarium.com/users](https://manage.scalarium.com/users)) - I highly encourage to setup a new user in scalarium (i.e. devdeploy) and then render him new API_TOKEN. 
 
 
 
