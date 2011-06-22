@@ -54,6 +54,17 @@ and then for example execute a deploy for one of your applications:
 <code>api.deploy_application('application_id')</code>
 </pre>
 
+This will return hash containing information about current deploy:
+[Scalarium Documentation details](http://support.scalarium.com/kb/api/fetching-deployment-details)
+
+We can then use the 'id' from the above hash and current application id to call for information about the progress:
+
+<pre>
+<code>api.fetch_deployment_details('application_id','deployment_id')</code>
+</pre>
+
+
+
 to obtain list of all possible applications execute:
 <pre>
 <code>api.get_applications</code>
@@ -111,7 +122,7 @@ Here is a simple [RAKE task](https://gist.github.com/1037410) that illustrates h
 License
 --
 
-Copyright (c) 2010 Lukasz Lazewski
+Copyright (c) 2011 Lukasz Lazewski
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

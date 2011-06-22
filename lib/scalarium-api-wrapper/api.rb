@@ -21,6 +21,15 @@ module Scalarium
       http_get_request(Scalarium.applications_url)
     end
     
+    # Method pings scalarium to check the progress of the deploy
+    # @see http://support.scalarium.com/kb/api/fetching-deployment-details
+    # 
+    # @returns hash [Hash]      -       Hash contains all the deployment details 
+    # 
+    def fetch_deployment_details(app_id, deployment_id)
+      http_get_request(Scalarium.applications_url+"/api/applications/#{app_id}/deployments/#{deployment_id}")
+    end
+    
     # Method allows to deploy application in scalarium
     #
     # @option app_id    [String]  -     The ID of application we want to deploy.

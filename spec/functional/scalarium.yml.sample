@@ -1,0 +1,5 @@
+# IMPORTANT NOTE: functional test will deploy this application during testing 
+# so please make sure you are okay with that! 
+
+api_token: SET_YOUR_TOKEN_HERE
+app_id: SET_YOUR_APPLICATION_ID

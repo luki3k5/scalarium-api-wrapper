@@ -18,6 +18,11 @@ module Scalarium
   def self.configuration
     @configuration ||= Scalarium::Configuration.new
   end
+  
+  # setting an alias for :configuration 
+  class << self
+    alias configure configuration
+  end
 end
 
 

@@ -38,5 +38,10 @@ describe "Scalarium::API", "when first created" do
   it "should be able to get all the applications" do
     @api.should respond_to(:get_applications)
   end
+
+  it "should be able to get deployment status aka deployment details" do
+    @api.should respond_to(:fetch_deployment_details)
+  end
+
   
 end
