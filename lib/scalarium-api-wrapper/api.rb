@@ -21,7 +21,7 @@ module Scalarium
       http_get_request(Scalarium.applications_url)
     end
     
-    # Method pings scalarium to check the progress of the deploy
+    # Method pings scalarium to check the details of the deploy (i.e. progress)
     # @see http://support.scalarium.com/kb/api/fetching-deployment-details
     # 
     # @returns hash [Hash]      -       Hash contains all the deployment details 
