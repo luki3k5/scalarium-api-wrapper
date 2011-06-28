@@ -119,6 +119,20 @@ Here is a simple [RAKE task](https://gist.github.com/1037410) that illustrates h
 
 
 
+Contributing
+--
+
+* Fork this project
+
+* Check with TODO.txt what could be worked on 
+
+* Push your contribution to a branch named after your change
+  ie: git push origin master:added-feature-name
+
+* Send me a pull request through GitHub with a description of
+  what you are contributing.
+
+
 
 License
 --

@@ -1,0 +1,4 @@
+1 - Call to obtain all the deployments for application [currently talking to Scalarium's support about this - 28th of June]
+2 - Getting Clouds' roles, instances of particular cloud and instance of role (http://support.scalarium.com/kb/api/listing-clouds-roles-and-instances)
+3 - Creating, starting, stopping and rebooting instances
+4 - Listing and deploying applications [DONE]
