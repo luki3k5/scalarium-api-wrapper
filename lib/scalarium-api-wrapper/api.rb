@@ -1,10 +1,6 @@
-require 'rest-client'
-require 'json'
-
 module Scalarium
   
-  class API
-    
+  class API < AbstractAPI
     # Method fetches all clouds on the server    
     #
     # @option [String]       - cloud id of the cloud we want to see or nothing then we get the list of all clouds
@@ -26,6 +22,9 @@ module Scalarium
     def get_cloud(cloud_id)
       http_get_request(Scalarium.clouds_url+"/#{cloud_id}")      
     end
+    
+    def get_cloud_roles(cloud_id)
+    end    
         
     # Method fetches all applications on the server
     # 
@@ -45,12 +44,11 @@ module Scalarium
     end
     
     # Method allows to deploy application in scalarium
-    #
-    # @param  [String]  app_id    -     The ID of application we want to deploy.
-    #
-    # @option [Hash]   options    -     Hash with options:
-    #   :comment                  -     comment to be displayed on the deployment
-    #   :migrate                  -     boolean indicating if we should run the migrations too (false by default)
+    #                                            
+    # @param  [String]  app_id               -   The ID of application we want to deploy.
+    #                                            
+    # @option options [String]   :comment    -   comment to be displayed on the deployment
+    # @option options [Boolean]  :migrate    -   boolean indicating if we should run the migrations too (false by default)
     #
     # @return [Hash] response of the progress and details
     # 
@@ -60,27 +58,9 @@ module Scalarium
                                :migrate => options[:migrate])
       http_post_request(Scalarium.applications_url+"/#{app_id}/deploy", json_command)                         
     end
-    
-    
-    private
-    def get_headers
-      # quick validation if the header is set
-      if Scalarium.headers['X-Scalarium-Token'].nil? || Scalarium.headers['X-Scalarium-Token'] == "" 
-        raise ArgumentError "X-Scalarium-Token is not set"
-      end
-      Scalarium.headers     
-    end
-    
-    # Method uses RestClient to make a HTTP POST request to Scalarium API    
-    def http_post_request(url, json_command)
-      JSON.parse(RestClient.post(url, json_command, get_headers))
-    end
-
-    # Method uses RestClient to make a HTTP GET request to Scalarium API    
-    def http_get_request(url)
-      JSON.parse(RestClient.get(url, get_headers))
-    end
-    
-    
   end
+  
+  # adding some better naming for the fetch_deployment_details -> get_deployment_details 
+  # it is just an alias for existing method (so it stays backward compatible)
+  API.class_eval{alias :get_deployment_details :fetch_deployment_details}
 end

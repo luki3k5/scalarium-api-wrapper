@@ -28,4 +28,5 @@ end
 
 require "scalarium-api-wrapper/version"
 require "scalarium-api-wrapper/configuration"
+require "scalarium-api-wrapper/abstract_api"
 require "scalarium-api-wrapper/api"

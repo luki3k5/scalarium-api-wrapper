@@ -2,4 +2,6 @@
 2 - Getting Clouds' roles, instances of particular cloud and instance of role (http://support.scalarium.com/kb/api/listing-clouds-roles-and-instances)
 3 - Creating, starting, stopping and rebooting instances
 4 - Listing and deploying applications [DONE]
-5 - Move cloud specific stuff to API::Clouds and applications to API::Applications
+5a - abstract HTTP REST Client calls into separate class
+5b - Move cloud specific stuff to API::Clouds and applications to API::Applications
+6  - add the rake task to run the tests from the APP_ROOT

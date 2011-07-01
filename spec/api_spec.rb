@@ -34,6 +34,23 @@ describe "Scalarium::API", "when first created" do
   it "should be able to get all the clouds" do
     @api.should respond_to(:get_clouds)
   end
+  
+  it "should be able to get single cloud" do
+    @api.should respond_to(:get_cloud)
+  end
+  
+  it "should be able to get list cloud's roles" do
+    @api.should respond_to(:get_cloud_roles)
+  end
+
+  it "should be able to get list cloud's instances"
+    #@api.should respond_to(:get_cloud_instances)
+
+  it "should be able to get cloud's instances of a specific role"
+
+  it "should be able to get cloud's single instance"
+
+
 
   it "should be able to get all the applications" do
     @api.should respond_to(:get_applications)
@@ -41,6 +58,10 @@ describe "Scalarium::API", "when first created" do
 
   it "should be able to get deployment status aka deployment details" do
     @api.should respond_to(:fetch_deployment_details)
+  end
+  
+  it "should be able to get deployment status aka deployment details with alias" do
+    @api.should respond_to(:get_deployment_details)
   end
 
   
