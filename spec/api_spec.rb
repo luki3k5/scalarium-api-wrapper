@@ -27,10 +27,6 @@ describe "Scalarium::API", "when first created" do
     Scalarium.clouds_url.should == @clouds_url
   end
   
-  it "should be able to deploy application" do
-    @api.should respond_to(:deploy_application)
-  end
-
   it "should be able to get all the clouds" do
     @api.should respond_to(:get_clouds)
   end
@@ -43,14 +39,21 @@ describe "Scalarium::API", "when first created" do
     @api.should respond_to(:get_cloud_roles)
   end
 
-  it "should be able to get list cloud's instances"
-    #@api.should respond_to(:get_cloud_instances)
+  it "should be able to get list cloud's instances" do
+    @api.should respond_to(:get_cloud_instances)
+  end
 
-  it "should be able to get cloud's instances of a specific role"
+  it "should be able to get cloud's instances of a specific role" do
+    
+  end
 
-  it "should be able to get cloud's single instance"
+  it "should be able to get cloud's single instance" do
+    @api.should respond_to(:get_instance_of_cloud)
+  end
 
-
+  it "should be able to deploy application" do
+    @api.should respond_to(:deploy_application)
+  end
 
   it "should be able to get all the applications" do
     @api.should respond_to(:get_applications)
@@ -60,9 +63,18 @@ describe "Scalarium::API", "when first created" do
     @api.should respond_to(:fetch_deployment_details)
   end
   
-  it "should be able to get deployment status aka deployment details with alias" do
+  it "should be able to get deployment status aka deployment details with alias :get_deployment_details" do
     @api.should respond_to(:get_deployment_details)
   end
+
+  it "should be able to get all deployments details" do
+    @api.should respond_to(:fetch_all_deployments)
+  end
+  
+  it "should be able to get all deployments details with alias :get_all_deployments" do
+    @api.should respond_to(:get_all_deployments)
+  end
+
 
   
 end

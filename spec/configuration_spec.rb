@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe "Scalarium.configuration", "when first created" do
 
+  before(:all) do
+    Scalarium.configuration.api_token = nil
+  end
+
   it "should has no api token set yet" do
     Scalarium.configuration.api_token.should == nil
   end

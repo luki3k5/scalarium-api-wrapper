@@ -3,16 +3,24 @@ Scalarium API wrapper
 
 About
 --
-Since Scalarium is currently (June 2011) not supporting roles and therefore it is troublesome/risky to give all the development team members full access to the clouds/applications this library will allow easy setup of local environments for anyone minimizing the risk of 'stoping' the production environment. 
-For example limiting only to one cloud or application (development environment). 
- 
+This library simplifies and automates the interaction with Scalarium's API. It makes all the common operations for obtaining 
+Clouds with their instances and roles a breeze. <br />
+It is very easy to integrate this library with 
+your application to control your instances (restart, stop, start) and applications (deploy/redeploy) from the command line 
+
+<!--
+Since Scalarium is currently (June 2011) not supporting members' roles and therefore it is troublesome/risky to give all the development team members full access to the clouds/applications this library will allow easy setup of local environments for anyone minimizing the risk of 'stoping' the production environment. 
+For example limiting only to one cloud or application (development environment).
+ -->
+
 All the documentation for Scalarium API - ([http://support.scalarium.com/kb/api](http://support.scalarium.com/kb/api))
 
 It can:
 
-* Obtain a list of all clouds 
-* Obtain a list of all applications 
-* Perform deploy of specified application, stop/start/restart clouds 
+* Obtain a list of all clouds with their instances & roles 
+* Obtain a list of all applications plus their deployements
+* Perform deploy of specified application, with custom comment and enabled migrations command
+* Interact with the clouds stop/start/restart clouds (Still under development)
 
 
 
@@ -128,6 +136,8 @@ Contributing
 
 * Push your contribution to a branch named after your change
   ie: git push origin master:added-feature-name
+
+* Try to write tests first, so we know it works beforehand  
 
 * Send me a pull request through GitHub with a description of
   what you are contributing.
