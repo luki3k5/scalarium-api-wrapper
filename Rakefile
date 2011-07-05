@@ -2,12 +2,12 @@ namespace :test do
 
   desc "run spec/unit tests"
   task :spec do
-    print %x[rspec spec/*_spec.rb]
+    print %x[rspec -c -f s spec/*_spec.rb]
   end
   
   desc "run functional tests"
   task :functional do
-    print %x[rspec spec/functional/*_spec.rb]
+    print %x[rspec -c -f s spec/functional/*_spec.rb]
   end
   
   desc "run all the tests"
