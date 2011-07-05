@@ -20,18 +20,18 @@ describe "Scalarium functional tests", "when first created" do
     @api.get_applications.class.should == Array
   end
   
-  # it "should redeploy application with specified ID and comment: #{@comment} returning status should be in proper state" do
-  #   @response_status = @api.deploy_application(@application_id, :comment => @comment)
-  #   @response_status.class.should == Hash
-  #   @response_status["status"].should == "running"
-  #   @response_status["command"].should == "deploy" 
-  #   @response_status["application_id"].should == @application_id
-  # 
-  #   sleep 2
-  #   id_of_deployment = @response_status["id"]
-  #   @status_check_response = @api.fetch_deployment_details(@application_id, id_of_deployment)
-  #   @status_check_response.class.should == Hash
-  #   @status_check_response["status"].should == "running"
-  # end
+  it "should redeploy application with specified ID and comment: #{@comment} returning status should be in proper state" do
+    @response_status = @api.deploy_application(@application_id, :comment => @comment)
+    @response_status.class.should == Hash
+    @response_status["status"].should == "running"
+    @response_status["command"].should == "deploy" 
+    @response_status["application_id"].should == @application_id
+  
+    sleep 2
+    id_of_deployment = @response_status["id"]
+    @status_check_response = @api.fetch_deployment_details(@application_id, id_of_deployment)
+    @status_check_response.class.should == Hash
+    @status_check_response["status"].should == "running"
+  end
   
 end
