@@ -31,6 +31,16 @@ module Scalarium
     def get_cloud_roles(cloud_id)
       http_get_request(Scalarium.clouds_url+"/#{cloud_id}/roles")      
     end
+
+    # Method obtains details of all instances for a given role
+    #
+    # @param [String] cloud_id     - id of the cloud instance detail we want to obtain
+    # @param [String] role_id      - id of the role for specified cloud we want instances for
+    # @return [Hash]               - hash with details about the passed instance of the cloud
+    #
+    def get_role_instances(cloud_id, role_id)
+      http_get_request(Scalarium.clouds_url+"/#{cloud_id}/roles/#{role_id}/instances")
+    end
     
     # Method obtains instances of the cloud
     #

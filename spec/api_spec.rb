@@ -44,7 +44,7 @@ describe "Scalarium::API", "when first created" do
   end
 
   it "should be able to get cloud's instances of a specific role" do
-    
+    @api.should respond_to(:get_role_instances)
   end
 
   it "should be able to get cloud's single instance" do
